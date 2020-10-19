@@ -79,5 +79,5 @@ li {
 }
 
 li :last-child {
-    border-bottom: none;
+    border-bottom: 0px;
 }
