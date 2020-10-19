@@ -16,10 +16,12 @@ function validation() {
 
 function countPrice() {
     const newPrice = parseFloat(price.value);
-    const newPeople = parseFloat(people.value);
+    const newPeople = parseInt(people.value);
     const newTip = parseFloat(tip.value);
-    sum = (newPrice.value + (newPrice.value * newTip.value)) / newPeople.value;
+
+    const sum = (newPrice + (newTip * newPrice)) / newPeople;
     console.log(sum);
+
     costInfo.style.display = 'block'
     cost.textContent = sum.toFixed(2);
 }
